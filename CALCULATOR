@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    char op;
+    char choice;
+    do
+    {
+    int num1;
+    printf("ENTER NUMBER 1: \n");
+    scanf("%d",&num1);
+
+    printf("ENTER OPERATOR +,-,*,/: \n");
+    scanf(" %c",&op);
+
+    int num2;
+    printf("ENTER NUMBER 2: \n");
+    scanf("%d",&num2);
+
+    switch(op)
+    {
+        case '+':
+        printf("NUMBER 1 + NUMBER 2 = %d \n",num1+num2);
+        break;
+
+        case '-':
+        printf("NUMBER 1 - NUMBER 2 = %d \n",num1-num2);
+        break;
+
+        case '*':
+        printf("NUMBER 1 * NUMBER 2 = %d \n",num1*num2);
+        break;
+
+        case '/':
+        printf("NUMBER 1 / NUMBER 2 = %d \n",num1/num2);
+        break;
+
+        default:
+        printf("ERROR OPERATOR IS NOT CORRECT \n");
+    }
+    printf("DO YOU WANT TO PERFORM OTHER OPERATION: ");
+    scanf(" %c",&choice);
+    }
+    while (choice=='y' || choice=='Y');
+    
+    return 0;
+}
